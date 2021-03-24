@@ -2,8 +2,9 @@ const express = require('express')
 const router = express.Router()
 
 const controller = require('../Controller/controllerUser')
+const middleware_api = require('../Middleware/middleware_user')
 
-router.post('/', controller.create)
+router.post('/', middleware_api, controller.create)
 router.put('/update/:id', controller.update)
 router.get('/filter/:id', controller.listID)
 router.delete('/:id', controller.delete)
