@@ -1,25 +1,17 @@
 const mongoose = require('../Config/config')
 const Schema = mongoose.Schema
 
-const SchemaUser = new Schema({
+const SchemaPost = new Schema({
     macaddress:{
         type: String,
         required: true
-    },
-    name:{
+    }, 
+    image:{
         type: String,
         required: true
     },
-    surname:{
+    subtitle:{
         type: String,
-        required: true
-    },
-    nickname:{
-        type: String,
-        required: true
-    },
-    age: {
-        type: Number,
         required: true
     },
     create:{
@@ -28,4 +20,4 @@ const SchemaUser = new Schema({
     }
 })
 
-module.exports = mongoose.model('GamerUser', SchemaUser)
+module.exports = mongoose.model('GamerPost', SchemaPost)
