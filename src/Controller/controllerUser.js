@@ -1,6 +1,6 @@
 const modelUser = require('../Model/modelUser')
 
-class Controller{
+class ControllerUser{
     async create(req, res){
         const user = new modelUser(req.body)
         await user
@@ -57,4 +57,4 @@ class Controller{
     }
 }
 
-module.exports = new Controller()
+module.exports = new ControllerUser()

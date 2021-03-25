@@ -13,9 +13,10 @@ router.delete('/:id', controllerUser.delete)
 router.get('/filter/all/:macaddress', controllerUser.list)
 
 //Post
-router.post('/post', controllerPost.create)
-router.put('/post/:id', controllerPost.upload)
-router.get('/post/listUser/:id', controllerPost.listID)
-router.get('/post/list/:macaddress', controllerPost.list)
+router.post('/postUser', controllerPost.create)
+router.put('/postUser/:id', controllerPost.upload)
+router.get('/postUser/listUser/:id', controllerPost.listID)
+router.delete('/postUser/deleteUser/:id', controllerPost.delete)
+router.get('/postUser/all/:macaddress', controllerPost.list)
 
 module.exports = router
