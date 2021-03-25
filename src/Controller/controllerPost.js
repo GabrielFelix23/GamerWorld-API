@@ -23,6 +23,18 @@ class controllerPost{
             return res.status(500).json(error)
         })
     }
+
+    async list(req, res){
+        await modelPost.find({
+            "macaddress": {"$in": req.params.macaddress}
+        })
+        .then((response) => {
+            return res.status(200).json(response)
+        })
+        .catch((error) => {
+            return res.status(500).json(error)
+        })
+    }
 }
 
 module.exports = new controllerPost()

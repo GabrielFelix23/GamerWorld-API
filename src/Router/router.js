@@ -15,5 +15,6 @@ router.get('/filter/all/:macaddress', controllerUser.list)
 //Post
 router.post('/post', controllerPost.create)
 router.put('/post/:id', controllerPost.upload)
+router.get('/post/list/:macaddress', controllerPost.list)
 
 module.exports = router
