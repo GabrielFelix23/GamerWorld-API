@@ -22,6 +22,14 @@ const SchemaUser = new Schema({
         type: Number,
         required: true
     },
+    image:{
+        type: Number,
+        required: true
+    },
+    subtitle:{
+        type: String,
+        required: true
+    },
     create:{
         type: Date,
         default: Date.now()
