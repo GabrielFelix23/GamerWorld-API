@@ -35,10 +35,13 @@ const SchemaUser = new Schema({
         required: true
     },
     like:{
-        type: Boolean
+        type: Number
     },
     comment:{
         type: String
+    },
+    follower:{
+        type: Number
     },
     create:{
         type: Date,
