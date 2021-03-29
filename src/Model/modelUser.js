@@ -33,6 +33,9 @@ const SchemaUser = new Schema({
     like:{
         type: Number
     },
+    comment:{
+        type: String
+    },
     create:{
         type: Date,
         default: Date.now()
