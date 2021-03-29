@@ -30,6 +30,9 @@ const SchemaUser = new Schema({
         type: String,
         required: true
     },
+    like:{
+        type: Number
+    },
     create:{
         type: Date,
         default: Date.now()
