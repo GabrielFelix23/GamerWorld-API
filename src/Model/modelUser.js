@@ -6,6 +6,10 @@ const SchemaUser = new Schema({
         type: String,
         required: true
     },
+    avatar:{
+        type: Number,
+        required: true
+    },
     name:{
         type: String,
         required: true
@@ -22,8 +26,8 @@ const SchemaUser = new Schema({
         type: Number,
         required: true
     },
-    image:{
-        type: Number,
+    imagePost:{
+        type: String,
         required: true
     },
     subtitle:{
@@ -31,7 +35,7 @@ const SchemaUser = new Schema({
         required: true
     },
     like:{
-        type: Number
+        type: Boolean
     },
     comment:{
         type: String

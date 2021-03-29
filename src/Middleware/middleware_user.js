@@ -1,7 +1,7 @@
 const modelUser = require('../Model/modelUser')
 
 const validationUser = async(req, res, next) => {
-    const{macaddress, name, surname, nickname, age, image, subtitle} = req.body
+    const{macaddress, name, surname, nickname, age, imagePost, subtitle} = req.body
 
     if(!macaddress)
         return res.status(400).json({error: "Macaddress é obrigatório!"})
@@ -21,7 +21,7 @@ const validationUser = async(req, res, next) => {
     if(age < 16)
         return res.status(400).json({error: "Idade não pode ser menor que 16 anos!"})
 
-    if(!image)
+    if(!imagePost)
         return res.status(400).json({error: "Imagem é obrigatório!"})
 
     if(!subtitle)
